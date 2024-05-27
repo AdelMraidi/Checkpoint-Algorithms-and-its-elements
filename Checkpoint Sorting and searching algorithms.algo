@@ -1,0 +1,13 @@
+function insertSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let currentElement = arr[i]; //10
+    let lastindex = i - 1; //1
+    while (lastindex >= 0 && arr[lastindex] < currentElement) {
+      arr[lastindex + 1] = arr[lastindex];
+      lastindex--;
+    }
+    arr[lastindex + 1] = currentElement;
+  }
+
+  return arr;
+}
